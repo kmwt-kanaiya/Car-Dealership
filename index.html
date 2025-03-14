@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eagle Car Dealership - Home</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <script>
+        $(document).ready(function () {
+            $.getJSON("data.json", function (data) {
+                var tableContent = "<table><tr><th>Make</th><th>Model</th><th>Year</th></tr>";
+                $.each(data, function (key, value) {
+                    tableContent += "<tr><td>" + value.make + "</td><td>" + value.model +
                         "</td><td>" + value.year + "</td></tr>";
+                });
+                tableContent += "</table>";
+                $("#tableContainer").html(tableContent);
+            });
+        }); 
+    </script>
+
+    <script>
+        $(document).ready(function () {
             $("#loginBtn").click(function () {
                 var username = $("#username").val();
                 var password = $("#password").val();
