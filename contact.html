@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Contact - Eagle Car Dealership</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showAlert() {
+            alert("Congratulations Form Submitted Successfully");
+        }
+
+    </script>
+    <style>
+        table {
+            background-color: rgb(155, 155, 155);
+            padding: 2px;
+            margin-left: 20px;
+            border-spacing: 3px;
+        }
+
+        tr {
+            background-color: rgb(120, 119, 119);
+        }
+
+        td {
+            background-color: rgb(219, 217, 217);
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 align="center">Contact Us</h1>
+    <table border="1px" width="100%" align="center" bgcolor="grey">
+        <tr>
+            <td align="center">
+                <a href="home.html" txt-color="black">Home</a>
+            </td>
+            <td align="center">
+                <a href="inventory.html">Inventory</a>
+            </td>
+            <td align="center">
+                <a href="contact.html">Contact</a>
+            </td>
+            <td align="center">
+                <a href="about.html">About</a>
+            </td>
+        </tr>
+    </table>
+    <h2 align="center">Fill the form to Get in Touch</h2>
+    <form align="center" width="100%">
+        <table align="center" width="30%" height="60%" border="2px">
+            <tr>
+                <td><label for="fname">First Name: </label></td>
+                <td><input type="text" name="t1" id="fname"></td>
+            </tr>
+
+            <tr>
+                <td><label for="lname">Last Name: </label></td>
+                <td><input type="text" name="t2" id="lname"></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email: </label></td>
+                <td><input type="email" name="t4" id="email"></td>
+                <br><br>
+            </tr>
+
+            <tr>
+                <td><label for="Date ">Date of Birth: </label></td>
+                <td><input type="date" name="d1" id="date"></td>
+            </tr>
+
+            <tr>
+                <td><label for="city">City: </label></td>
+                <td>
+                    <select name="c1" id="city">
+                        <option value="Surat">Surat</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="gen">Gender: </label></td>
+                <td><input type="radio" name="g1" id="male" val ue="Male">
+                    <label for="male">Male </label>
+                    <input type="radio" name="g1" id="female" val ue="Female">
+                    <label for="female">Female </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="comment">Comment: </label></td>
+                <td><textarea name="area" id="comment" cols="35" rows="3"></textarea></td>
+            </tr>
+
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit" value="submit" on click=showAlert();>
+                    <input type="reset" value="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br><br><br><br><br>
+    <p align="center">&copy; 2025 Eagle Car Dealership</p>
+
+</body>
+
+</html>

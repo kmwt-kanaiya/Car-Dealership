@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script>
+                        "</td><td>" + value.year + "</td></tr>";
+            $("#loginBtn").click(function () {
+                var username = $("#username").val();
+                var password = $("#password").val();
+                $.ajax({
+                    type: "GET",
+                    url: "users.xml",
+                    dataType: "xml",
+                    success: function (xml) {
+                        $(xml).find("user").each(function () {
+                            var xmlUsername = $(this).find("username").text();
+                            var xmlPassword = $(this).find("password").text();
+                            if (username === xmlUsername && password === xmlPassword) {
+                                window.location.href = "home.html";
+                            }
+                        });
+                        alert("Invalid credentials!");
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <h1 align="center">Welcome to Eagle Car Dealership</h1>
+
+    <table border="1px" width="100%">
+        <tr>
+            <td align="center">
+                <a href="home.html" txt-color="black">Home</a>
+            </td>
+            <td align="center">
+                <a href="inventory.html">Inventory</a>
+            </td>
+            <td align="center">
+                <a href="contact.html">Contact</a>
+            </td>
+            <td align="center">
+                <a href="about.html">About</a>
+            </td>
+        </tr>
+    </table>
+
+    <img src="bg.jpeg" alt="loading" height="80%" width="100%">
+
+    <h2>Your Trusted Car Dealer. Explore our wide range of vehicles and find your perfect ride.
+    </h2>
+    <p align="center">&copy; 2025 Eagle Car Dealership</p>
+</body>
+
+</html>
